@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProBlock</title>
+    <style>
+         .container{
+            width:400px;
+            max-height: 275px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+         }
+
+         .topItem{
+            height: 65%;
+         }
+
+         .topItem>h1 {
+            font-family: cursive;
+            text-align: center;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: rgb(48,48,48);
+            border-bottom: 2px solid rgb(225,225,225);
+         }
+
+         .Info {
+            padding-left: 10px;
+         }
+
+         .Info>p {
+            color: rgb(104,104,104);
+            font-size:12px;
+            padding: 0;
+            margin: 0;
+         }
+
+         .Info>h4 {
+            color: rgb(48,48,48);
+            font-size:17px;
+            padding: 0;
+            margin: 0;
+         }
+
+         #btn {
+            color: #fff;
+            background-color: rgb(241,88,88);
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            margin-top: 48px; 
+            margin-right: 10px;
+            }
+
+         #btn:hover {
+             background-color: #fff;
+             color: rgb(241,88,88);
+             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            }
+
+
+          #btn:active{
+            background-color: rgb(175,175,175);
+         }
+
+         .bottomItem{
+            height: 35%;
+            position: relative;
+         }
+
+         .ERROR{
+            padding-top: 5px;
+         }
+
+         .ERROR>p {
+            margin: 0;
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #f8f8f8;
+            border: 1px solid #e6e6e6;
+            border-radius: 3px;
+            padding: 8px;
+            text-align: center;
+            color: #555;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+         }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class ="topItem">
+            <h1 style="font-weight: bold;color:rgb(113, 227, 13);font-family: fantasy;">PROBLOCK</h1> 
+            <div class="topItemMain">
+                <div class="Info">
+                  <p style="font-size: 16px; line-height: 1.5; color: #e65460; font-weight: bold; margin-bottom: 2px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">You are currently on:</p>
+
+                    <h4 id="url" style="font-size: 16px; line-height: 1.5; color: #8a0a0a; font-weight: bold; margin-bottom: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></h4>
+                </div>
+                <button id = "btn">BLOCK THIS URL</button>
+            </div>
+        </div>
+
+        <div class="bottomItem"></div>
+    </div>
+</body>
+
+<script src="./scripts/popup.js"></script>
+</html>
