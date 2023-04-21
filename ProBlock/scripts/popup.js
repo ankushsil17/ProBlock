@@ -37,7 +37,7 @@ function handleBlockedUrls(data) {
         const updatedBlockedUrls = data.BlockedUrls.map((e) => {
           if (e.url === websiteHostName && e.status === "In_Progress") {
             const then = new Date();
-            then.setHours(1, 0, 0, 0);
+            then.setHours(24, 0, 0, 0);
             const blockTill = then.getTime();
             return { ...e, status: "BLOCKED", BlockTill: blockTill };
           }
